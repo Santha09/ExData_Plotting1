@@ -27,7 +27,7 @@ Feb1t2Data <- Feb1t2Data %>% mutate(DateTime = paste(as.Date(Date,format='%d/%m/
   mutate(DateTime=as.POSIXct(DateTime))
 
 #plot multiple line chart onto a png graphic device
-png("plot3.png",bg="transparent")
+png("plot3.png")
 with(Feb1t2Data,{plot(DateTime,Sub_metering_1,col="black",type="l",ylab="Energy sub metering",xlab="")
   lines(DateTime,Sub_metering_2,col="red")
   lines(DateTime,Sub_metering_3, col="blue")})

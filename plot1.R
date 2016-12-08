@@ -22,7 +22,7 @@ Feb1t2Data<-read.table(text = grep('^[1|2]/2/2007',readLines(filename),value=TRU
               col.names = names(colname),sep=";",na.strings = '?')
 
 #draw the first histogram showing Global Active Power on to a png file
-png("plot1.png",bg="transparent")
+png("plot1.png")
 with(Feb1t2Data,hist(Global_active_power,col="red",
                      xlab="Global Active Power (kilowatts)",ylab="Frequency",main="Global Active Power"))
 dev.off()

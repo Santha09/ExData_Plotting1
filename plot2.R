@@ -27,7 +27,7 @@ Feb1t2Data <- Feb1t2Data %>% mutate(DateTime = paste(as.Date(Date,format='%d/%m/
                mutate(DateTime=as.POSIXct(DateTime))
 
 #plot the line chart onto a png graphic device
-png("plot2.png",bg="transparent")
+png("plot2.png")
 with (Feb1t2Data,plot(DateTime,Global_active_power, 
      ylab="Global Active Power (kilowatts)",xlab="",main="",type="l"))
 dev.off()

@@ -27,7 +27,7 @@ Feb1t2Data <- Feb1t2Data %>% mutate(DateTime = paste(as.Date(Date,format='%d/%m/
   mutate(DateTime=as.POSIXct(DateTime))
 
 #plot multiple plots onto a png graphic device with a 2 row 2 col plot matrix
-png("plot4.png",bg="transparent")
+png("plot4.png")
 par(mfcol=c(2,2))
 with (Feb1t2Data,plot(DateTime,Global_active_power, 
                       ylab="Global Active Power",xlab="",main="",type="l"))
